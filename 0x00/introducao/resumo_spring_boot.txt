@@ -1,0 +1,21 @@
+O Spring Boot é um framework utilizado para facilitar a criação de aplicações *standalone* (independentes) utilizando módulos e convenções Spring. Iniciar um projeto utilizando Spring Boot facilita muito a preparação do ambiente e injeção de dependências, por exemplo.
+
+Alguns benefícios e recursos do Spring Boot:
+
+- possui convenções próprias para a injeção de dependências no projeto, o que facilita a padronização e o versionamento.
+- já possui um servidor embarcado, o que facilita o acesso rápido à aplicação. Por padrão, é o Apache Tomcat, mas pode ser alterado no pom.xml do projeto.
+- utiliza o pom.xml para a organização de dependências (Maven), de forma fácil e organizada.
+- contém DevTools, que facilitam etapas do desenvolvimento, como reiniciar a aplicação quando é realizada alguma alteração. Para a web, inclusive, ele possui integração com o Live Reload, que facilita o reload de uma página web em HTML.
+- todas as configurações iniciais do projeto poupam quaisquer linhas de código. Caso seja necessário, as configurações podem ser alteradas utilizando o application.properties ou application.yaml.
+- define algumas configurações padrão, poupando tempo do desenvolvedor. Caso seja adicionada alguma dependência web, por exemplo, o Spring MVC será definido como default para diversos aspectos.
+- fornece features para a aplicação em produção, como métricas, verificação de saúde da aplicação, configurações externas.
+
+A adição de dependências no projeto é muito simples e dinâmica. Inicialmente, utilizando o Maven, é possível visualizar a árvore de todas as dependências do projeto através do comando `mvn dependency:tree` . 
+
+Para adicionar novas dependências, basta inclui-las no pom.xml através da tag <dependency> dentro da tag <dependencies>
+
+É possível utilizar Spring Boot em todas as IDEs que suportam jdk e Maven. Contudo, por ter a função direcionada para o próprio Spring, a STS - Spring Tools Suites - é a mais apropriada caso seja um projeto utilizando unicamente Spring Framework.
+
+Para facilitar ainda mais a criação de um projeto com Spring Boot, existe a ferramenta Spring Initializr, que recebe informações essenciais do projeto (ferramenta de construção - Maven ou Gradle), versão do Spring Boot, linguagem de programação, metadados do projeto (artifact, group, name, description), empacotamento (jar ou war) e versão do java na máquina local. Além disso, também é possível adicionar as dependências do projeto direto por essa ferramenta. 
+
+O Spring Initializr pode ser usado pela web (start.spring.io) ou diretamente pela IDE, através do plugin da ferramenta.

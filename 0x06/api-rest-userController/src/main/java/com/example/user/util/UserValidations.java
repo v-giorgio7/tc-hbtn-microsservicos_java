@@ -7,14 +7,14 @@ public class UserValidations {
     }
 
     public static boolean isUsernameValid(String username) {
-        return isLengthHigherThanThreeAndLowerThanFive(username);
+        return isLengthHigherThanThreeAndLowerThanFifteen(username);
     }
 
     public static boolean isCPFValid(String cpf) {
-        return isLengthHigherThanThreeAndLowerThanFive(cpf);
+        return isLengthHigherThanThreeAndLowerThanFifteen(cpf);
     }
 
-    private static boolean isLengthHigherThanThreeAndLowerThanFive(String word) {
+    private static boolean isLengthHigherThanThreeAndLowerThanFifteen(String word) {
         return word.length() > 3 && word.length() < 15;
     }
 }

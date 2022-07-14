@@ -2,6 +2,7 @@ package com.example.calculator.model;
 
 import com.example.calculator.exception.NullNumberException;
 import com.example.calculator.exception.NumberDividedPerZeroException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -12,10 +13,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
-    Calculator calculator = new Calculator();
+    Calculator calculator;
+
+    @BeforeEach
+    public void setup(){
+        calculator = new Calculator();
+    }
 
     @Test
-    void sumTest() {
+    public void sumTest() {
         Double number1 = 10.0;
         Double number2 = 20.0;
         assertEquals(number1 + number2,
